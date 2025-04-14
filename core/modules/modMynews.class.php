@@ -19,7 +19,21 @@ class modMynews extends DolibarrModules
         $this->dirs = array();
         $this->config_page_url = array();
 
-        $this->module_parts = array();
+        $this->module_parts = array(
+            'triggers' => 0,
+            'login' => 0,
+            'substitutions' => 0,
+            'menus' => 0,
+            'theme' => 0,
+            'tpl' => 0,
+            'barcode' => 0,
+            'models' => 0,
+            'css' => array(),
+            'js' => array(),
+            'hooks' => array(),
+            'dir' => array(),
+            'workflow' => array(),
+        );
 
         $this->dictionaries = array();
         $this->boxes = array();
