@@ -16,6 +16,8 @@ if (empty($id)) {
 $object = new Societe($db);
 $object->fetch($id);
 
+$result = restrictedArea($user, 'societe', $object->id, '&societe', '', 'fk_soc', 'rowid', 0);
+
 $title = $langs->trans("NewsFor", $object->name);
 llxHeader('', $title, '');
 
